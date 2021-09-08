@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portafolio | ALSR</title>
+        <link rel="icon" type="image/png" href="./img/logos/favicon.png">
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+    </head>
+    <body>
+
+        <nav>
+            <h2 class="nombre">ALSR</h2>
+            <ul id="lista">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre_nosotros">Sobre Nosotros</a></li>
+                <li><a href="#conocimientos">Conocimientos</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div id="toggle"></div>
+        </nav>
+
+        <script type="text/javascript">
+            const toggle = document.getElementById('toggle');
+            const lista = document.getElementById('lista');
+
+            document.onclick = function(e) {
+                if(e.target.id !== 'toggle' && e.target.id !== 'lista') {
+                    toggle.classList.remove('active');
+                    lista.classList.remove('active');
+                }
+            }
+
+            toggle.onclick = function() {
+                toggle.classList.toggle('active');
+                lista.classList.toggle('active');
+            }
+        </script>
+
+        <main>
+            <section id="inicio">
+                <div class="fondo"></div>
+                <div class="contenedor">
+                    <div class="logo">
+                        <img src="./img/logos/logo.png">
+                    </div>
+                    <div class="contenido">
+                        <h4>Hola</h4>
+                        <h1>Nosotros somos</h1>
+                        <p>
+                            Somos desarrolladores freelance y le damos la bienvenida a 
+                            nuestro portafolio, aquí podrá encontrar toda la información 
+                            relacionada con nosotros
+                        </p>
+                        <a class="btn" href="#sobre_nosotros">Ver más</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sobre_nosotros">
+                <div class="contenedor">
+                    <div class="titulo">
+                        <div class="fondo">
+                            <img src="./img/fondos/fondo_2.jpg">
+                        </div>
+                        <h2>¿Quiénes somos?</h2>
+                    </div>
+                    <div class="descripcion">
+                        <p>
+                            Como mencionamos al principio nosotros somos desarrolladores freelance que día 
+                            a día van adquiriendo nuevos conocimientos y experiencias para la creación de 
+                            sitios con las mejores prácticas y tecnologías que existen actualmente.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="contenedor">
+                    <div class="titulo">
+                        <div class="fondo">
+                            <img src="./img/fondos/fondo_2.jpg">
+                        </div>
+                        <h2>Meta</h2>
+                    </div>
+                    <div class="descripcion">
+                        <p>
+                            Competir con empresas de desarrollo nacional y llevarle soluciones a todos nuestros clientes.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="contenedor">
+                    <div class="titulo">
+                        <div class="fondo">
+                            <img src="./img/fondos/fondo_2.jpg">
+                        </div>
+                        <h2>Misión</h2>
+                    </div>
+                    <div class="descripcion">
+                        <p>
+                            Brindar un servicio eficiente y de calidad para el desarrollo de sitios web 
+                            adaptados a las necesidades de cada cliente. Utilizaremos frameworks y 
+                            herramientas con alta demanda en el mercado laboral, generando así una 
+                            mejor interacción y satisfacción entre su sitio web y sus clientes.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="contenedor">
+                    <div class="titulo">
+                        <div class="fondo">
+                            <img src="./img/fondos/fondo_2.jpg">
+                        </div>
+                        <h2>Visión</h2>
+                    </div>
+                    <div class="descripcion">
+                        <p>
+                            Queremos llegar a convertirnos en una empresa reconocida por el trabajo 
+                            eficiente y de calidad que día a día desarrollamos, adquirir más experiencia 
+                            e irnos capacitando en nuevas tecnologías, contratar más personal y darles la 
+                            oportunidad de crecimiento técnico.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="conocimientos">
+                <div class="introduccion">
+                    <p>
+                        En <strong>ALSR</strong> contamos con los siguientes conocimientos:
+                    </p>
+                </div>
+
+                <div class="tecnologia">
+                    <h2>Angular</h2>
+                </div>
+
+                <div class="tecnologia">
+                    <h2>Bootstrap</h2>
+                </div>
+
+                <div class="tecnologia">
+                    <h2>Html5</h2>
+                </div>
+
+                <div class="tecnologia">
+                    <h2>Css3</h2>
+                </div>
+
+                <div class="tecnologia">
+                    <h2>Typescript</h2>
+                </div>
+
+                <div class="tecnologia">
+                    <h2>Javascript</h2>
+                </div>
+
+                <div class="tecnologia">
+                    <h2>Nodejs</h2>
+                </div>
+
+                <div class="tecnologia">
+                    <h2>Sql</h2>
+                </div>
+
+                <div class="tecnologia">
+                    <h2>Nosql</h2>
+                </div>
+            </section>
+
+            <section id="servicios">
+                <div class="introduccion">
+                    <p>
+                        Algunos de los servicios que ofrecemos son:
+                    </p>
+                </div>
+
+                <div class="contenido">
+                    <div class="titulo">
+                        <h2>Creación de:</h2>
+                    </div> 
+                    <div class="lista">
+                        <h4>Sitios Web Estáticos</h4>
+                        <h4>Sitios Web Dinámicos</h4>
+                        <h4>Responsive</h4>
+                        <h4>Bases de Datos</h4>
+                        <h4>Diagrama de Base de Datos</h4>
+                        <h4>Consultas SQL</h4>
+                        <h4>Algoritmos en JavaScript</h4>
+                    </div>
+                </div>    
+
+                <div class="otros">
+                    <h4>Entre otros...</h4>
+                </div>
+            </section>
+
+            <section id="proyectos">
+                <div class="introduccion">
+                    <h2>Proyectos</h2>
+                </div>
+
+                <div class="contenedor">
+                    <div class="encabezado">
+                        <div class="fondo">
+                            <img src="./img/fondos/fondo_4.jpg">
+                        </div>
+                        <h2>DBMultas</h2>
+                    </div>
+                    <div class="contenido">
+                        <div class="descripcion">
+                            <p>
+                                DBMultas es una Base de Datos creada en MySQL, posee un modelo de multas en donde se podrá almacenar la 
+                                información necesaria. Esta Base de Datos cuenta con entidades como: Municipalidad, Agente, Multa, Vehículo, 
+                                Conductor etc.
+                            </p>
+                        </div>
+                        <div class="tecnologias">
+                            <div class="titulo">
+                                <h3>Creado con:</h3>
+                            </div>
+                            <div class="lista">
+                                <h4>Sql</h4>
+                            </div>
+                        </div>
+                        <div class="enlace">
+                            <a href="https://github.com/AL-SR/DBMultas" target="_blank">Ir a repositorio</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contenedor">
+                    <div class="encabezado">
+                        <div class="fondo">
+                            <img src="./img/fondos/fondo_4.jpg">
+                        </div>
+                        <h2>DBEmpresa</h2>
+                    </div>
+                    <div class="contenido">
+                        <div class="descripcion">
+                            <p>
+                                DBEmpresa es una Base de Datos creada en MySQL, posee un modelo basado en el entorno empresarial para llevar 
+                                el control sobre ciertos temas en específico. En esta Base de Datos poseemos entidades como: Regiones, 
+                                Departamentos, Oficinas, Empleados etc.
+                            </p>
+                        </div>
+                        <div class="tecnologias">
+                            <div class="titulo">
+                                <h3>Creado con:</h3>
+                            </div>
+                            <div class="lista">
+                                <h4>Sql</h4>
+                            </div>
+                        </div>
+                        <div class="enlace">
+                            <a href="https://github.com/AL-SR/DBEmpresa" target="_blank">Ir a repositorio</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contenedor">
+                    <div class="encabezado">
+                        <div class="fondo">
+                            <img src="./img/fondos/fondo_4.jpg">
+                        </div>
+                        <h2>Encuesta</h2>
+                    </div>
+                    <div class="contenido">
+                        <div class="descripcion">
+                            <p>
+                                Este proyecto posee la funcionalidad de una encuesta, en él se podrán registrar los usuarios, iniciar sesión, 
+                                una vez iniciada la sesión los usuarios podrán comenzar a opinar como también podrán comentar cada opinión entre 
+                                otras funciones. 
+                            </p>
+                        </div>
+                        <div class="tecnologias">
+                            <div class="titulo">
+                                <h3>Creado con:</h3>
+                            </div>
+                            <div class="lista">
+                                <h4>Nosql</h4>
+                                <h4>MongoDB</h4>
+                                <h4>Js</h4>
+                                <h4>NodeJs</h4>
+                            </div>
+                        </div>
+                        <div class="enlace">
+                            <a href="https://github.com/AL-SR/Encuensta-Node.js---Master" target="_blank">Ir a repositorio</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contenedor">
+                    <div class="encabezado">
+                        <div class="fondo">
+                            <img src="./img/fondos/fondo_4.jpg">
+                        </div>
+                        <h2>Tweet</h2>
+                    </div>
+                    <div class="contenido">
+                        <div class="descripcion">
+                            <p>
+                                Tweet fue un proyecto que realizamos como parte final de nuestros estudios, el cual consistía en realizar 
+                                la parte del Backend de la gran red social denominada <a href="#" target="_blank">Twitter</a>. Dicho proyecto 
+                                posee todas las funciones de la red social.
+                            </p>
+                        </div>
+                        <div class="tecnologias">
+                            <div class="titulo">
+                                <h3>Creado con:</h3>
+                            </div>
+                            <div class="lista">
+                                <h4>Nosql</h4>
+                                <h4>MongoDB</h4>
+                                <h4>Js</h4>
+                                <h4>NodeJs</h4>
+                            </div>
+                        </div>
+                        <div class="enlace">
+                            <a href="https://github.com/AL-SR/Tweeter-Node.Js" target="_blank">Ir a repositorio</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contenedor">
+                    <div class="encabezado">
+                        <div class="fondo">
+                            <img src="./img/fondos/fondo_4.jpg">
+                        </div>
+                        <h2>Agenda</h2>
+                    </div>
+                    <div class="contenido">
+                        <div class="descripcion">
+                            <p>
+                                Este es un proyecto cuya finalidad es ayudar a las personas a recordar tareas, series, entre otras cosas, 
+                                para que no sea un motivo más de estrés. Todos estos eventos se presentarán mediante una lista sencilla y 
+                                fácil a la vista del usuario.
+                            </p>
+                        </div>
+                        <div class="tecnologias">
+                            <div class="titulo">
+                                <h3>Creado con:</h3>
+                            </div>
+                            <div class="lista">
+                                <h4>Js</h4>
+                                <h4>Css3</h4>
+                                <h4>Html5</h4>
+                            </div>
+                        </div>
+                        <div class="enlace">
+                            <a href="https://github.com/Joe1172003/todo-js" target="_blank">Ir a repositorio</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contenedor">
+                    <div class="encabezado">
+                        <div class="fondo">
+                            <img src="./img/fondos/fondo_4.jpg">
+                        </div>
+                        <h2>Flotilla de Vehículos</h2>
+                    </div>
+                    <div class="contenido">
+                        <div class="descripcion">
+                            <p>
+                                Flotilla de Vehículos es un proyecto enfocado principalmente en los talleres de vehículos, en el podemos ingresar 
+                                vehículos (marca, modelo, año, placa y estado del vehículo), también podremos modificar, eliminar y visualizar la 
+                                información de los vehículos.
+                            </p>
+                        </div>
+                        <div class="tecnologias">
+                            <div class="titulo">
+                                <h3>Creado con:</h3>
+                            </div>
+                            <div class="lista">
+                                <h4>Nosql</h4>
+                                <h4>MongoDB</h4>
+                                <h4>Js</h4>
+                                <h4>NodeJs</h4>
+                                <h4>Html5</h4>
+                                <h4>Css3</h4>
+                                <h4>Typescript</h4>
+                                <h4>Angular</h4>
+                            </div>
+                        </div>
+                        <div class="enlaces">
+                            <div class="backend">
+                                <h3>Backend:</h3>
+                                <a href="https://github.com/AL-SR/Flotilla-Vehiculos-Backend" target="_blank">Ir a repositorio</a>
+                            </div>
+                            <div class="frontend">
+                                <h3>Frontend:</h3>
+                                <a href="#" target="_blank">Ir a repositorio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contenedor">
+                    <div class="encabezado">
+                        <div class="fondo">
+                            <img src="./img/fondos/fondo_4.jpg">
+                        </div>
+                        <h2>GET APP LOCATION</h2>
+                    </div>
+                    <div class="contenido">
+                        <div class="descripcion">
+                            <p>
+                            esta aplicacion esta realizada en node.js , es una aplicación de consola interactiva utilizando como dependecia el inquirer con esto podremos obtener una mejor experincia de interfaz de usuario.
+                            </p>
+                        </div>
+                        <div class="tecnologias">
+                            <div class="titulo">
+                                <h3>Creado con:</h3>
+                            </div>
+                            <div class="lista">
+                                <h4>Js</h4>
+                                <h4>Node.js</h4>
+                            </div>
+                        </div>
+                        <div class="enlace_portafolio">
+                            <h3>Visitar en: </h3>
+                            <a href="https://github.com/AL-SR/App-get-Location---consola---node-.js" target="_blank">Ir al repositorio</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contacto">
+                <div class="fondo"></div>
+                <div class="contenido">
+                    <h3 class="introduccion">Para nosotros sería un honor poder trabajar en su proyecto</h3>
+                    <h2 class="pregunta">¿Desea ponerse en contacto con nuestro equipo?</h2>
+                    <h3 class="correo">Correo</h3>
+                    <h3 class="email">alsr.contacto@gmail.com</h3>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            
+        </footer>
+
+    </body>
+</html>

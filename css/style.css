@@ -1,0 +1,1279 @@
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    letter-spacing: 2px;
+    text-decoration: none;
+    list-style: none;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #212F3D;
+}
+
+
+/* NAV */
+
+nav {
+    width: 100%;
+    height: 80px;
+    background-color: #2E4053;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 10;
+}
+
+nav .nombre {
+    color: #FDFEFE;
+    font-size: 30px;
+    margin-left: 100px;
+}
+
+nav #lista {
+    margin-right: 100px;
+    display: flex;
+}
+
+nav #lista li a {
+    color: #FDFEFE;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border-radius: 3px;
+    transition: color 0.4s, background-color 0.4s;
+}
+
+nav #lista li a:hover {
+    color: #2E4053;
+    background-color: #FDFEFE;
+}
+
+#toggle {
+    width: 40px;
+    height: 40px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+    transition: 0.2s;
+}
+
+#toggle::before {
+    content: '';
+    width: 20px;
+    height: 3px;
+    background-color: #FDFEFE;
+    transform: translateY(-5px);
+    position: absolute;
+    transition: 0.2s;
+}
+
+#toggle::after {
+    content: '';
+    width: 20px;
+    height: 3px;
+    background-color: #FDFEFE;
+    transform: translateY(5px);
+    position: absolute;
+    transition: 0.2s;
+}
+
+#toggle.active::before {
+    transform: translateY(0) rotate(45deg);
+}
+
+#toggle.active::after {
+    transform: translateY(0) rotate(-45deg);
+}
+
+
+/* CONTENIDO */
+
+/* SECCION INICIO */
+
+#inicio {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#inicio .fondo {
+    width: 100%;
+    height: calc(100vh - 80px);
+    top: 80px;
+    background-image: url("../img/fondos/fondo_1.jpg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: brightness(0.5);
+    opacity: 0.4;
+    position: absolute;
+}
+
+#inicio .contenedor {
+    width: 100%;
+    height: calc(100vh - 80px);
+    top: 80px;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+#inicio .contenedor .logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #63D9FF;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#inicio .contenedor .logo img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+
+#inicio .contenedor .contenido {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#inicio .contenedor .contenido h4 {
+    font-weight: normal;
+    font-size: 18px;
+    color: #D7DBDD;
+}
+
+#inicio .contenedor .contenido h1 {
+    color: #FDFEFE;
+    font-size: 42px;
+    margin: 13px 0;
+}
+
+#inicio .contenedor .contenido h1::after {
+    content: " ALSR";
+    color: #63D9FF;
+}
+
+#inicio .contenedor .contenido p {
+    color: #D7DBDD;
+    text-align: center;
+    font-size: 18px;
+}
+
+.btn {
+    width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid #63D9FF;
+    color: #FDFEFE;
+    font-weight: bold;
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.4s;
+}
+
+.btn:hover {
+    background-color: #63D9FF;
+}
+
+
+/* SECCION SOBRE NOSOTROS */
+
+#sobre_nosotros {
+    width: 100%;
+    height: 100vh;
+    padding: 100px 30px 30px 30px;
+    box-sizing: border-box;
+    background-color: #FDFEFE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+#sobre_nosotros .contenedor {
+    width: 280px;
+    height: 430px;
+    margin: 0 15px;
+    background-color: #ECF0F1;
+    box-shadow: 2px 4px 5px #A6ACAF;
+}
+
+#sobre_nosotros .contenedor .titulo {
+    width: 100%;
+    height: 120px;
+    position: relative;
+}
+
+#sobre_nosotros .contenedor .titulo .fondo {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#sobre_nosotros .contenedor .titulo .fondo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.3);
+    opacity: 0.7;
+}
+
+#sobre_nosotros .contenedor .titulo h2 {
+    color: #FDFEFE;
+    line-height: 120px;
+    text-align: center;
+    font-size: 28px;
+    position: relative;
+}
+
+#sobre_nosotros .contenedor .descripcion {
+    width: 100%;
+    height: 310px;
+    padding: 15px 15px 10px 15px;
+    box-sizing: border-box;
+}
+
+#sobre_nosotros .contenedor .descripcion p {
+    color: #17202A;
+    font-size: 17px;
+    text-align: center;
+}
+
+
+/* SECCION CONOCIMIENTOS */
+
+#conocimientos {
+    width: 100%;
+    height: 60vh;
+    padding: 110px 30px 30px 30px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+#conocimientos .introduccion {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#conocimientos .introduccion p {
+    color: #FDFEFE;
+    font-size: 18px;
+}
+
+#conocimientos .introduccion p strong {
+    color: #63D9FF;
+}
+
+#conocimientos .tecnologia {
+    width: 135px;
+    height: 50px;
+    margin: 0 10px;
+    border: 2px solid #63D9FF;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border 0.4s;
+}
+
+#conocimientos .tecnologia:hover {
+    border: 2px solid #FDFEFE;
+}
+
+#conocimientos .tecnologia h2 {
+    font-size: 18px;
+    color: #63D9FF;
+    text-transform: uppercase;
+}
+
+
+/* SECCION SERVICIOS */
+
+#servicios {
+    width: 100%;
+    height: 90vh;
+    padding: 110px 30px 30px 30px;
+    box-sizing: border-box;
+    background-color: #FDFEFE;
+    position: relative;
+}
+
+#servicios .introduccion {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#servicios .introduccion p {
+    color: #17202A;
+    font-size: 18px;
+}
+
+#servicios .contenido {
+    width: 100%;
+    height: calc(100% - 100px);
+}
+
+#servicios .contenido .titulo {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#servicios .contenido .titulo h2 {
+    color: #17202A;
+    font-size: 28px;
+}
+
+#servicios .contenido .lista {
+    width: 100%;
+    height: calc(100% - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#servicios .contenido .lista h4 {
+    width: 280px;
+    height: 60px;
+    border: 2px solid #D7DBDD;
+    border-radius: 3px;
+    margin: 0 10px;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #17202A;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border 0.4s;
+}
+
+#servicios .contenido .lista h4:hover {
+    border: 2px solid #A6ACAF;
+}
+
+#servicios .otros {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#servicios .otros h4 {
+    font-size: 17px;
+}
+
+
+/* SECCION PROYECTOS */
+
+#proyectos {
+    width: 100%;
+    height: 100%;
+    padding: 110px 30px 30px 30px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+#proyectos .introduccion {
+    width: 100%;
+    height: 35px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#proyectos .introduccion h2 {
+    color: #FDFEFE;
+    font-size: 28px;
+}
+
+#proyectos .contenedor {
+    width: 280px;
+    height: 550px;
+    margin: 20px;
+    border-radius: 3px;
+    background-color: #273746;
+    box-shadow: 2px 4px 5px #17202A;
+}
+
+#proyectos .contenedor .encabezado {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#proyectos .contenedor .encabezado .fondo {
+    width: 100%;
+    height: 100%;
+}
+
+#proyectos .contenedor .encabezado .fondo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#proyectos .contenedor .encabezado h2 {
+    color: #ECF0F1;
+    position: absolute;
+}
+
+#proyectos .contenedor .contenido {
+    width: 100%;
+    height: 450px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#proyectos .contenedor .contenido .descripcion {
+    width: 100%;
+    height: 215px;
+    margin-bottom: 10px;
+}
+
+#proyectos .contenedor .contenido .descripcion p {
+    color: #ECF0F1;
+    font-size: 17px;
+    text-align: center;
+}
+
+#proyectos .contenedor .contenido .descripcion p a {
+    color: #63D9FF;
+}
+
+#proyectos .contenedor .contenido .tecnologias {
+    width: 100%;
+    height: 100px;
+}
+
+#proyectos .contenedor .contenido .tecnologias .titulo {
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#proyectos .contenedor .contenido .tecnologias .titulo h3 {
+    color: #63D9FF;
+    font-size: 17px;
+}
+
+#proyectos .contenedor .contenido .tecnologias .lista {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#proyectos .contenedor .contenido .tecnologias .lista h4 {
+    color: #ECF0F1;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 4px;
+}
+
+#proyectos .contenedor .contenido .enlace {
+    text-align: center;
+}
+
+#proyectos .contenedor .contenido .enlace a {
+    color: #63D9FF;
+    font-size: 17px;
+    transition: color 0.4s;
+}
+
+#proyectos .contenedor .contenido .enlace a:hover {
+    color: #2E86C1;
+}
+
+#proyectos .contenedor .contenido .enlaces {
+    width: 100%;
+    height: 50px;
+    margin-top: 12px;
+}
+
+#proyectos .contenedor .contenido .enlaces .backend,
+#proyectos .contenedor .contenido .enlaces .frontend,
+#proyectos .contenedor .contenido .enlace_portafolio {
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#proyectos .contenedor .contenido .enlaces .backend h3,
+#proyectos .contenedor .contenido .enlaces .frontend h3,
+#proyectos .contenedor .contenido .enlace_portafolio h3 {
+    color: #ECF0F1;
+    font-size: 17px;
+    font-weight: normal;
+    margin-right: 10px;
+}
+
+#proyectos .contenedor .contenido .enlaces .backend a,
+#proyectos .contenedor .contenido .enlaces .frontend a,
+#proyectos .contenedor .contenido .enlace_portafolio a {
+    color: #63D9FF;
+    font-size: 17px;
+    transition: color 0.4s;
+}
+
+#proyectos .contenedor .contenido .enlaces .backend a:hover,
+#proyectos .contenedor .contenido .enlaces .frontend a:hover,
+#proyectos .contenedor .contenido .enlace_portafolio a:hover {
+    color: #2E86C1;
+}
+
+
+/* SECCION CONTACTO */
+
+#contacto {
+    width: 100%;
+    height: 50vh;
+    position: relative;
+}
+
+#contacto .fondo {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/fondos/fondo_3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: brightness(0.4);
+    opacity: 0.5;
+    position: absolute;
+}
+
+#contacto .contenido {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#contacto .contenido .introduccion {
+    color: #FDFEFE;
+    font-size: 18px;
+}
+
+#contacto .contenido .pregunta {
+    color: #63D9FF;
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+#contacto .contenido .correo {
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #2E4053;
+    background-color: #FDFEFE;
+    font-size: 18px;
+    margin-bottom: -17px;
+    border-radius: 3px;
+    position: relative;
+}
+
+#contacto .contenido .email {
+    width: 260px;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    color: #63D9FF;
+    font-size: 18px;
+    border: 2px solid #FDFEFE;
+    border-radius: 3px;
+    transition: color 0.4s, background-color 0.4s;
+}
+
+#contacto .contenido .email:hover {
+    color: #2E4053;
+    background-color: #A6ACAF;
+}
+
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    height: 80px;
+    background-color: #2E4053;
+}
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1299px) {
+
+    #sobre_nosotros {
+        height: 100%;
+    }
+
+    #sobre_nosotros .contenedor {
+        margin: 15px 20px;
+    }
+
+}
+
+@media screen and (max-width: 1230px) {
+
+    nav .nombre {
+        margin-left: 50px;
+    }
+
+    nav #lista {
+        margin-right: 50px;
+    }
+
+}
+
+@media screen and (max-width: 1130px) {
+
+    nav .nombre {
+        font-size: 28px;
+        margin-left: 30px;
+    }
+
+    nav #lista {
+        margin-right: 30px;
+    }
+
+    nav #lista li a {
+        font-size: 13px;
+    }
+
+    #inicio .contenedor .logo {
+        width: 130px;
+        height: 130px;
+    }
+
+    #inicio .contenedor .logo img {
+        width: 120px;
+        height: 120px;
+    }
+
+    #inicio .contenedor .contenido h4,
+    #inicio .contenedor .contenido p {
+        font-size: 16px;
+    }
+
+    #inicio .contenedor .contenido h1 {
+        font-size: 36px;
+    }
+
+    .btn {
+        width: 150px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    #sobre_nosotros .contenedor {
+        height: 390px;
+    }
+
+    #sobre_nosotros .contenedor .titulo h2 {
+        font-size: 26px;
+    }
+
+    #sobre_nosotros .contenedor .descripcion {
+        height: 270px;
+    }
+
+    #sobre_nosotros .contenedor .descripcion p {
+        font-size: 16px;
+    }
+
+    #conocimientos .introduccion p {
+        font-size: 16px;
+    }
+
+    #conocimientos .tecnologia {
+        width: 120px;
+        height: 45px;
+    }
+
+    #conocimientos .tecnologia h2 {
+        font-size: 16px;
+    }
+
+    #servicios .introduccion p {
+        font-size: 16px;
+    }
+
+    #servicios .contenido .titulo h2 {
+        font-size: 26px;
+    }
+
+    #servicios .contenido .lista h4 {
+        font-size: 16px;
+        height: 50px;
+    }
+
+    #servicios .otros h4 {
+        font-size: 15px;
+    }
+
+    #proyectos .introduccion h2 {
+        font-size: 26px;
+    }
+
+    #proyectos .contenedor .contenido .descripcion p,
+    #proyectos .contenedor .contenido .tecnologias .titulo h3,
+    #proyectos .contenedor .contenido .enlace a,
+    #proyectos .contenedor .contenido .enlaces .backend h3,
+    #proyectos .contenedor .contenido .enlaces .backend a,
+    #proyectos .contenedor .contenido .enlaces .frontend h3,
+    #proyectos .contenedor .contenido .enlaces .frontend a,
+    #proyectos .contenedor .contenido .enlace_portafolio h3,
+    #proyectos .contenedor .contenido .enlace_portafolio a {
+        font-size: 16px;
+    }
+
+    #proyectos .contenedor .contenido .tecnologias .lista h4 {
+        font-size: 13px;
+    }
+
+    #proyectos .contenedor .contenido .descripcion {
+        height: 190px;
+    }
+
+    #proyectos .contenedor {
+        height: 510px;
+    }
+
+    #proyectos .contenedor .contenido {
+        height: 410px;
+    }
+
+    #contacto .contenido .introduccion {
+        font-size: 16px;
+    }
+
+    #contacto .contenido .pregunta {
+        font-size: 26px;
+    }
+
+    #contacto .contenido .correo {
+        width: 90px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 16px;
+        margin-bottom: -14px;
+    }
+
+    #contacto .contenido .email {
+        width: 240px;
+        height: 65px;
+        line-height: 65px;
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 1020px) {
+
+    nav .nombre {
+        margin-left: 25px;
+    }
+
+    nav #lista {
+        margin-right: 20px;
+    }
+
+}
+
+@media screen and (max-width: 995px) {
+
+    nav .nombre {
+        margin-left: 50px;
+    }
+
+    nav #lista {
+        position: fixed;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        top: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s;
+    }
+
+    nav #lista li {
+        margin: 20px 0;
+    }
+
+    nav #lista li a {
+        padding: 15px;
+    }
+
+    nav #lista li a:hover {
+        color: #63D9FF;
+        background: none;
+    }
+
+    nav #lista.active {
+        height: calc(100vh - 80px);
+        top: 80px;
+        left: 0;
+        background-color: #212F3D;
+    }
+
+    #toggle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 50px;
+    }
+
+}
+
+@media screen and (max-width: 670px) {
+
+    #inicio .contenedor {
+        padding: 15px;
+    }
+
+    #conocimientos {
+        padding: 110px 15px 30px 15px;
+    }
+
+    #servicios {
+        padding: 110px 15px 30px 15px;
+    }
+
+}
+
+@media screen and (max-width: 662px) {
+
+    #contacto .fondo {
+        background-position: center top;
+    }
+
+    #contacto .contenido .pregunta {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+}
+
+@media screen and (max-width: 637px) {
+
+    #servicios {
+        height: 100%;
+    }
+
+    #servicios .contenido .lista h4 {
+        margin: 10px;
+    }
+
+    #servicios .otros {
+        margin-top: 15px;
+    }
+
+}
+
+@media screen and (max-width: 548px) {
+
+    #contacto .contenido {
+        padding: 10px;
+    }
+
+}
+
+@media screen and (max-width: 540px) {
+
+    #inicio .contenedor .logo {
+        width: 120px;
+        height: 120px;
+    }
+
+    #inicio .contenedor .logo img {
+        width: 110px;
+        height: 110px;
+    }
+
+    #inicio .contenedor .contenido {
+        width: 100%;
+    }
+
+    #inicio .contenedor .contenido h4,
+    #inicio .contenedor .contenido p {
+        font-size: 14px;
+    }
+
+    #inicio .contenedor .contenido h1 {
+        font-size: 32px;
+    }
+
+    .btn {
+        width: 130px;
+        height: 32px;
+        font-size: 13px;
+    }
+
+    #sobre_nosotros .contenedor {
+        width: 240px;
+        height: 360px;
+    }
+
+    #sobre_nosotros .contenedor .titulo {
+        height: 90px;
+    }
+
+    #sobre_nosotros .contenedor .titulo h2 {
+        line-height: 90px;
+        font-size: 24px;
+    }
+
+    #sobre_nosotros .contenedor .descripcion {
+        height: 270px;
+    }
+
+    #sobre_nosotros .contenedor .descripcion p {
+        font-size: 14px;
+    }
+
+    #conocimientos .introduccion p {
+        font-size: 14px;
+    }
+
+    #conocimientos .tecnologia {
+        width: 110px;
+        height: 40px;
+    }
+
+    #conocimientos .tecnologia h2 {
+        font-size: 14px;
+    }
+
+    #servicios .introduccion p {
+        font-size: 14px;
+    }
+
+    #servicios .contenido .titulo h2 {
+        font-size: 24px;
+    }
+
+    #servicios .contenido .lista h4 {
+        width: 255px;
+        height: 45px;
+        font-size: 14px;
+    }
+
+    #servicios .otros h4 {
+        font-size: 13px;
+    }
+    
+    #proyectos .introduccion h2 {
+        font-size: 24px;
+    }
+
+    #proyectos .contenedor {
+        width: 250px;
+        height: 490px;
+    }
+
+    #proyectos .contenedor .contenido {
+        height: 390px;
+    }
+
+    #proyectos .contenedor .contenido .descripcion {
+        height: 170px;
+    }
+
+    #proyectos .contenedor .contenido .descripcion p,
+    #proyectos .contenedor .contenido .tecnologias .titulo h3,
+    #proyectos .contenedor .contenido .enlace a,
+    #proyectos .contenedor .contenido .enlaces .backend h3,
+    #proyectos .contenedor .contenido .enlaces .backend a,
+    #proyectos .contenedor .contenido .enlaces .frontend h3,
+    #proyectos .contenedor .contenido .enlaces .frontend a,
+    #proyectos .contenedor .contenido .enlace_portafolio h3,
+    #proyectos .contenedor .contenido .enlace_portafolio a {
+        font-size: 14px;
+    }
+
+    #proyectos .contenedor .contenido .tecnologias .lista h4 {
+        font-size: 12px;
+    }
+
+    #contacto .contenido .introduccion {
+        font-size: 14px;
+    }
+
+    #contacto .contenido .pregunta {
+        font-size: 24px;
+    }
+
+    #contacto .contenido .correo {
+        font-size: 14px;
+        margin-bottom: -9px;
+    }
+
+    #contacto .contenido .email {
+        height: 50px;
+        line-height: 50px;
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 479px) {
+
+    #contacto .contenido .introduccion {
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 431px) {
+ 
+    #conocimientos {
+        height: 100%;
+    }
+
+    #conocimientos .introduccion {
+        margin-bottom: 15px;
+    }
+
+    #conocimientos .introduccion p {
+        text-align: center;
+    }
+
+    #conocimientos .tecnologia {
+        margin: 10px;
+    }
+
+    #proyectos {
+        padding: 110px 15px 30px 15px;
+    }
+
+}
+
+@media screen and (max-width: 390px) {
+
+    nav .nombre {
+        font-size: 26px;
+    }
+
+    #inicio .contenedor {
+        padding: 5px;
+    }
+
+    #inicio .contenedor .contenido h4,
+    #inicio .contenedor .contenido p {
+        font-size: 13px;
+    }
+
+    #inicio .contenedor .contenido h1 {
+        font-size: 28px;
+    }
+
+    .btn {
+        font-size: 12px;
+    }
+
+    #sobre_nosotros {
+        padding: 100px 5px 30px 5px;
+    }
+
+    #sobre_nosotros .contenedor {
+        width: 200px;
+        height: 320px;
+    }
+
+    #sobre_nosotros .contenedor .titulo {
+        height: 80px;
+    }
+
+    #sobre_nosotros .contenedor .titulo h2 {
+        font-size: 20px;
+        line-height: 80px;
+    }
+
+    #sobre_nosotros .contenedor .descripcion {
+        height: 240px;
+        padding: 14px 7px 5px 7px;
+    }
+
+    #sobre_nosotros .contenedor .descripcion p {
+        font-size: 13px;
+    }
+
+    #conocimientos {
+        padding: 110px 7px 30px 7px;
+    }
+
+    #conocimientos .introduccion p {
+        font-size: 13px;
+    }
+
+    #conocimientos .tecnologia {
+        width: 100px;
+        height: 35px;
+    }
+
+    #conocimientos .tecnologia h2 {
+        font-size: 13px;
+    }
+
+    #servicios {
+        padding: 110px 7px 30px 7px;
+    }
+
+    #servicios .introduccion p {
+        font-size: 13px;
+    }
+
+    #servicios .contenido .titulo h2 {
+        font-size: 20px;
+    }
+
+    #servicios .contenido .lista h4 {
+        width: 240px;
+        height: 40px;
+        font-size: 13px;
+    }
+
+    #servicios .otros h4 {
+        font-size: 12px;
+    }
+
+    #proyectos {
+        padding: 110px 5px 30px 5px;
+    }
+
+    #proyectos .introduccion h2,
+    #proyectos .contenedor .encabezado h2 {
+        font-size: 20px;
+    }
+
+    #proyectos .contenedor {
+        width: 220px;
+        height: 470px;
+    }
+
+    #proyectos .contenedor .contenido {
+        height: 370px;
+    }
+
+    #proyectos .contenedor .contenido .descripcion {
+        height: 165px;
+    }
+
+    #proyectos .contenedor .contenido .descripcion p,
+    #proyectos .contenedor .contenido .tecnologias .titulo h3,
+    #proyectos .contenedor .contenido .enlace a,
+    #proyectos .contenedor .contenido .enlaces .backend h3,
+    #proyectos .contenedor .contenido .enlaces .backend a,
+    #proyectos .contenedor .contenido .enlaces .frontend h3,
+    #proyectos .contenedor .contenido .enlaces .frontend a,
+    #proyectos .contenedor .contenido .enlace_portafolio h3,
+    #proyectos .contenedor .contenido .enlace_portafolio a {
+        font-size: 13px;
+    }
+
+    #proyectos .contenedor .contenido .tecnologias .lista h4 {
+        font-size: 11px;
+    }
+
+    #proyectos .contenedor .contenido .enlace_portafolio {
+        height: 50px;
+        flex-direction: column;
+    }
+
+    #proyectos .contenedor .contenido .enlace_portafolio a {
+        margin-top: 10px;
+    }
+
+    #contacto .contenido {
+        padding: 5px;
+    }
+
+    #contacto .contenido .introduccion {
+        font-size: 13px;
+    }
+
+    #contacto .contenido .pregunta {
+        font-size: 20px;
+    }
+
+    #contacto .contenido .correo {
+        width: 80px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 13px;
+    }
+
+    #contacto .contenido .email {
+        width: 230px;
+        height: 45px;
+        font-size: 13px;
+    }
+
+}
+
+@media screen and (max-width: 331px) {
+
+    #inicio .contenedor .contenido h1 {
+        font-size: 25px;
+    }
+    
+    #servicios .introduccion p {
+        text-align: center;
+    }
+
+}
